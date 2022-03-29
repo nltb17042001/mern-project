@@ -15,34 +15,26 @@ const UpdatePostModal = () => {
     setShowToast,
   } = useContext(PostContext);
   //State
-
   const [updatedPost, setUpdatedPost] = useState(post);
+
   useEffect(() => setUpdatedPost(post), [post]);
 
+  console.log(post);
   const { title, description, url, status } = updatedPost;
 
   const onChangeUpdatedPostFrom = (event) =>
     setUpdatedPost({ ...updatedPost, [event.target.name]: event.target.value });
+  console.log(updatedPost);
 
   const onSubmit = async (event) => {
     event.preventDefault();
     const { success, message } = await updatePost(updatedPost);
-    console.log(message);
-    // resetShowAddPostModal();
+    setShowUpdatePostModal(false);
     setShowToast({ show: true, message, type: success ? "success" : "danger" });
   };
 
-  //   const resetShowAddPostModal = () => {
-  //     setNewPost({
-  //       title: "",
-  //       description: "",
-  //       url: "",
-  //       status: "" || "TO LEARN",
-  //     });
-  //     ;
-  // };
   const closeDialog = () => {
-    setUpdatedPost(post)
+    setUpdatedPost(post);
     setShowUpdatePostModal(false);
   };
   console.log(showUpdatePostModal);
@@ -106,7 +98,7 @@ const UpdatePostModal = () => {
           <Button variant="secondary" onClick={closeDialog}>
             Cancel
           </Button>
-          <Button variant="primary" type="submit" onClick={closeDialog}>
+          <Button variant="primary" type="submit">
             LearnIt!
           </Button>
         </Modal.Footer>

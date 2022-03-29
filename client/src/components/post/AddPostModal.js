@@ -17,10 +17,10 @@ const AddPostModal = () => {
     status: "TO LEARN",
   });
   const { title, description, url, status } = newPost;
-
+  console.log(newPost);
   const onChangeNewPostFrom = (event) =>
     setNewPost({ ...newPost, [event.target.name]: event.target.value });
-
+  console.log(newPost);
   const onSubmit = async (event) => {
     event.preventDefault();
     const { success, message } = await addPost(newPost);

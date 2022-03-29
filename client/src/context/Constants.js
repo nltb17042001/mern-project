@@ -1,8 +1,8 @@
 export const apiUrl =
   process.env.NODE_ENV !== "production"
     ? "http://localhost:5000/api/"
-    : "somedeployedURL";
-
+    : "someasdkasjl";
+// https://cryptic-oasis-02805.herokuapp.com/api/
 export const LOCAL_STORAGE_TOKEN_NAME = "Learnit-mern";
 
 //Action

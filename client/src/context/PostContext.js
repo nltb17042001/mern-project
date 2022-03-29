@@ -81,6 +81,7 @@ const PostContextProvider = ({ children }) => {
       );
       if (response.data.success) {
         dispatch({ type: UPDATE_POST, payload: response.data.post });
+
         return response.data;
       }
     } catch (error) {
