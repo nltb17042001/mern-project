@@ -1,0 +1,59 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "binhdeptrai12",
+    "password": "binhvandeptrai12"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"binhdeptrai1",
+    "password": "binhvandeptrai1"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlY2IxZTQwMWFkMGZlM2M0ZDFkOWEiLCJpYXQiOjE2NDg1MzI5NTJ9.fLZHLS8ARhnzs4KB4gub-5xnBQgG2yQ5VNit5dy1RUE
+
+{  
+    "title": "my ",
+    "description": "lazada",
+    "url": "youtube.com",
+    "status": "LEARNING"
+}
+
+
+
+###
+GET  http://localhost:5000/api/posts
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlY2IxZTQwMWFkMGZlM2M0ZDFkOWEiLCJpYXQiOjE2NDg1MzI5NTJ9.fLZHLS8ARhnzs4KB4gub-5xnBQgG2yQ5VNit5dy1RUE
+
+###
+PUT http://localhost:5000/api/posts/623f3c2e4203330884a1c0a5
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZDYzNjZiYzcwOTQ5ZTE5NGQ3Y2YiLCJpYXQiOjE2NDgyODkxMzh9.revYanSEJIbcAW91ORCDyYPDumV2mups0OCsLMYkF64
+
+{
+    "title": "Reacjs",
+    "description": "",
+    "url": "google.com",
+    "status": "LEARNING"
+    
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/623f3c2e4203330884a1c0a5
+Content-Type: application/json
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZDYzNjZiYzcwOTQ5ZTE5NGQ3Y2YiLCJpYXQiOjE2NDgyODkxMzh9.revYanSEJIbcAW91ORCDyYPDumV2mups0OCsLMYkF64
+
+###
+GET http://localhost:5000/api/auth
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjNlZDYzNjZiYzcwOTQ5ZTE5NGQ3Y2YiLCJpYXQiOjE2NDgyODkxMzh9.revYanSEJIbcAW91ORCDyYPDumV2mups0OCsLMYkF64
+
